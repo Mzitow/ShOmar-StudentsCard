@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_margin="4dp"
+    android:background="@drawable/green_box"
+    android:layoutDirection="rtl"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:layout_height="wrap_content"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_marginTop="8dp"
+        android:text="القرآن الكريم"
+        android:textSize="22sp"
+        android:gravity="center_horizontal"
+        android:textColor="@color/green"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_marginTop="12dp"
+        android:layout_margin="12dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="100"
+        android:layout_height="60dp">
+
+        <LinearLayout
+            android:layout_gravity="center_vertical"
+            android:layout_weight="85"
+            android:orientation="horizontal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_marginStart="4dp"
+                android:textDirection="rtl"
+                android:text=" تاريخ اليوم : "
+                android:textSize="16sp"
+                android:textColor="@android:color/darker_gray"
+                android:gravity="center_vertical"
+                android:fontFamily="@font/segoeui"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+        <TextView
+            android:textDirection="rtl"
+            android:id="@+id/todayDate"
+            android:text="5/7/2020"
+            android:textSize="24sp"
+            android:textColor="@android:color/black"
+            android:gravity="center_vertical"
+            android:fontFamily="@font/roboto_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </TextView>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/refresh_btn"
+            android:layout_marginTop="4dp"
+            android:layout_gravity="center"
+            android:layout_weight="15"
+            android:layout_width="0dp"
+            android:orientation="horizontal"
+            android:layout_marginBottom="4dp"
+            android:layout_height="50dp">
+        <ImageView
+            android:id="@+id/refresh_btn_icon"
+            android:layout_gravity="center"
+            android:padding="5dp"
+            android:src="@drawable/ic_refresh"
+            android:layout_margin="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </ImageView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginBottom="4dp"
+        android:orientation="vertical"
+        android:layout_weight="5"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <Spinner
+            android:id="@+id/sp_students_level"
+            android:layout_margin="2dp"
+            android:padding="8dp"
+            android:spinnerMode="dropdown"
+            tools:listitem="@layout/spinner_item"
+            android:popupBackground="@drawable/white_spinner_oultline"
+            android:background="@drawable/white_spinner_oultline"
+            android:layoutDirection="rtl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="18dp"
+        android:orientation="vertical"
+        android:layout_weight="5"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <Spinner
+            android:id="@+id/sp_student_name"
+            android:layout_margin="2dp"
+            android:padding="8dp"
+            android:spinnerMode="dropdown"
+            tools:listitem="@layout/spinner_item"
+            android:popupBackground="@drawable/white_spinner_oultline"
+            android:background="@drawable/white_spinner_oultline"
+            android:layoutDirection="rtl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginBottom="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:fontFamily="@font/segoeuib"
+            android:textSize="16sp"
+            android:text="  بداية الدرس : "
+            android:textColor="@android:color/darker_gray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="0dp"
+            android:layoutDirection="ltr"
+            android:layout_marginEnd="12dp"
+            android:weightSum="5"
+            android:layout_marginBottom="2dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="4dp"
+                android:orientation="vertical"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:weightSum="100"
+                android:layout_width="0dp"
+                android:layout_height="40dp">
+                <Spinner
+                    android:id="@+id/sp_start_verse"
+                    android:padding="3dp"
+                    android:spinnerMode="dropdown"
+                    tools:listitem="@layout/spinner_item"
+                    android:popupBackground="@drawable/white_spinner_oultline"
+                    android:background="@drawable/white_spinner_oultline"
+                    android:layoutDirection="rtl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="4dp"
+                android:orientation="horizontal"
+                android:layout_weight="3"
+                android:gravity="center_vertical"
+                android:weightSum="100"
+                android:layout_width="0dp"
+                android:layout_height="40dp">
+                <Spinner
+                    android:id="@+id/sp_start_surah"
+                    android:padding="3dp"
+                    android:spinnerMode="dropdown"
+                    tools:listitem="@layout/spinner_item"
+                    android:popupBackground="@drawable/white_spinner_oultline"
+                    android:background="@drawable/white_spinner_oultline"
+                    android:layoutDirection="rtl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <include
+        layout="@layout/mistake_cards">
+    </include>
+
+    <LinearLayout
+        android:layout_marginTop="12dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:fontFamily="@font/segoeuib"
+            android:textSize="16sp"
+            android:text="  نهاية الدرس : "
+            android:textColor="@android:color/darker_gray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="0dp"
+            android:layoutDirection="ltr"
+            android:layout_marginEnd="12dp"
+            android:weightSum="5"
+            android:layout_marginBottom="2dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="4dp"
+                android:orientation="vertical"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:weightSum="100"
+                android:layout_width="0dp"
+                android:layout_height="40dp">
+                <Spinner
+                    android:id="@+id/sp_end_verse"
+                    android:padding="3dp"
+                    android:spinnerMode="dropdown"
+                    tools:listitem="@layout/spinner_item"
+                    android:popupBackground="@drawable/white_spinner_oultline"
+                    android:background="@drawable/white_spinner_oultline"
+                    android:layoutDirection="rtl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="4dp"
+                android:orientation="horizontal"
+                android:layout_weight="3"
+                android:gravity="center_vertical"
+                android:weightSum="100"
+                android:layout_width="0dp"
+                android:layout_height="40dp">
+                <Spinner
+                    android:id="@+id/sp_end_surah"
+                    android:padding="3dp"
+                    android:spinnerMode="dropdown"
+                    tools:listitem="@layout/spinner_item"
+                    android:popupBackground="@drawable/white_spinner_oultline"
+                    android:background="@drawable/white_spinner_oultline"
+                    android:layoutDirection="rtl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:id="@+id/save_btn"
+        android:text=" حفظ التسميع "
+        android:background="@color/green"
+        app:backgroundTint="@color/green"
+        app:strokeColor="@color/white"
+        app:strokeWidth="2dp"
+        android:layout_margin="12dp"
+        android:textSize="16dp"
+        app:cornerRadius="5dp"
+        android:fontFamily="@font/segoeui"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
